@@ -7,9 +7,9 @@ function Footer() {
         <footer class="footer">
             <div class="footer__content">
                 <div class="footer__logo">
-                    <a href="./index.html" class="text-decoration-none">
-                        <img class="logoFooter" src="/imgs/brandLogo/Logo Perichon no slogan.jpg" alt="Perichon brand logo"/>
-                    </a> 
+                    <Link to="/">
+                        <img src="/imgs/brandLogo/Logo Perichon no slogan.jpg" alt="brand Logo" className="brandLogoHeader"/>
+                    </Link>
                 </div>
 
                 <div class="footer__quickMenu">                    

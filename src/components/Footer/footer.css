@@ -20,7 +20,7 @@
         justify-content: space-around;
         margin: 1rem 0 1rem 0;
         text-align: center;
-        padding-right: 8rem; }
+        /*padding-right: 2rem;*/ }
         .footer .footer__content .quickMenu__content .quickMenu__title h4 {
           font-size: 2rem;
           font-weight: bolder;
