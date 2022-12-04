@@ -4,60 +4,60 @@ import { Link } from "react-router-dom";
 
 function Footer() {
     return (     
-        <footer class="footer">
-            <div class="footer__content">
-                <div class="footer__logo">
+        <footer className="footer">
+            <div className="footer__content">
+                <div className="footer__logo">
                     <Link to="/">
                         <img src="/imgs/brandLogo/Logo Perichon no slogan.jpg" alt="brand Logo" className="brandLogoHeader"/>
                     </Link>
                 </div>
 
-                <div class="footer__quickMenu">                    
-                    <ul class="quickMenu__content">
-                        <li class="quickMenu__title">
+                <div className="footer__quickMenu">                    
+                    <ul className="quickMenu__content">
+                        <li className="quickMenu__title">
                             <h4>Quick Menu</h4>
                         </li>
-                        <li class="quickMenu__item">
+                        <li className="quickMenu__item">
                             <Link to="/">Todos</Link>
                         </li>
-                        <li class="quickMenu__item">
+                        <li className="quickMenu__item">
                             <Link to="/category/trapos">Trapos</Link>
                         </li>
-                        <li class="quickMenu__item">
+                        <li className="quickMenu__item">
                             <Link to="/category/rejilla">Rejillas</Link>
                         </li>
-                        <li class="quickMenu__item">
+                        <li className="quickMenu__item">
                          <Link to="/category/paño">Paños</Link>
                         </li>
-                        <li class="quickMenu__item">
+                        <li className="quickMenu__item">
                             <Link to="/category/franela">Franela</Link>
                         </li>
                     </ul>
                 </div>
 
-                <ul class="footer__socialMedia">
-                    <li class="socialMedia__item">
-                        <a class="socialMedia__item-content a" href="https://wa.me/543794809317">
-                            <img class="a__img" src="/imgs/footerImg/whatsapp.png" alt="whatsapp icon"/>
+                <ul className="footer__socialMedia">
+                    <li className="socialMedia__item">
+                        <a className="socialMedia__item-content a" href="https://wa.me/543794809317">
+                            <img className="a__img" src="/imgs/footerImg/whatsapp.png" alt="whatsapp icon"/>
                         </a>
                     </li>
-                    <li class="socialMedia__item">
-                        <a class="socialMedia__item-content a" href="https://www.instagram.com/trapos_perichon/">
-                            <img class="a__img" src="/imgs/footerImg/instagram.png" alt="instagram icon"/>
+                    <li className="socialMedia__item">
+                        <a className="socialMedia__item-content a" href="https://www.instagram.com/trapos_perichon/">
+                            <img className="a__img" src="/imgs/footerImg/instagram.png" alt="instagram icon"/>
                         </a>
                     </li>
-                    <li class="socialMedia__item">
-                        <a class="socialMedia__item-content a" href="https://www.facebook.com/traposperichon">
-                            <img class="a__img" src="/imgs/footerImg/facebook.png" alt="facebook icon"/>
+                    <li className="socialMedia__item">
+                        <a className="socialMedia__item-content a" href="https://www.facebook.com/traposperichon">
+                            <img className="a__img" src="/imgs/footerImg/facebook.png" alt="facebook icon"/>
                         </a>
                     </li>
                 </ul>
             </div>
 
-            <div class="footer__rights">
+            <div className="footer__rights">
                 <span></span>
                 <div >
-                    <p class="rights__text">
+                    <p className="rights__text">
                         © 2023 PERICHON Todos los derechos reservados - by <a href="https://github.com/BernardoQ">BERQ</a>
                     </p>          
                 </div>

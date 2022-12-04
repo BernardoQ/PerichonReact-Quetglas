@@ -18,12 +18,14 @@ function Item({ title, imgurl, price, color, id }) {
       </div>
 
       <div> 
-      <Link to={urlDetail}>
+        <Link to={urlDetail}>
           <MyButton color={color}>-</MyButton>
-        </Link>     
+        </Link>    
+
         <Link to={urlDetail}>
           <MyButton color={color}>Agregar</MyButton>
         </Link>
+        
         <Link to={urlDetail}>
           <MyButton color={color}>+</MyButton>
         </Link>

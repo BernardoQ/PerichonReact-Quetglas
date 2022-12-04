@@ -2,7 +2,7 @@
   position: relative;
   margin: 10px 10px;
   width: 25rem;
-  height: 33rem;
+  height: 31rem;
   border-radius: 15px;
   box-shadow: 0px 0px 4px rgba(0,0,0,0.50);
   background-color: #fff;
@@ -29,7 +29,7 @@
 }
 
 .card_detail{
-  padding: 2px 2px;
+  margin-bottom: 1rem;
 }
 
 .card:hover .card-favicon{
