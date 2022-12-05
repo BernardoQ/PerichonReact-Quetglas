@@ -1,10 +1,11 @@
 import React from "react";
 import MyButton from "../MyButton/MyButton";
 import ToggleButton from "../ToggleButton/ToggleButton";
+
 import "./item.css";
 import { Link } from "react-router-dom";
 
-function Item({ title, imgurl, price, color, id }) {
+function Item({ title, imgurl, price, color, stock, id }) {
   const urlDetail = `/detail/${id}`;
   return (
     <div className="card">
@@ -15,20 +16,6 @@ function Item({ title, imgurl, price, color, id }) {
       <div className="card_detail">
         <h3>{title}</h3>
         <h4 className="priceTag">$ {price}</h4>
-      </div>
-
-      <div> 
-        <Link to={urlDetail}>
-          <MyButton color={color}>-</MyButton>
-        </Link>    
-
-        <Link to={urlDetail}>
-          <MyButton color={color}>Agregar</MyButton>
-        </Link>
-        
-        <Link to={urlDetail}>
-          <MyButton color={color}>+</MyButton>
-        </Link>
       </div>
 
       <Link to={urlDetail}>

@@ -1,4 +1,5 @@
 import "./itemdetail.css";
+import ItemCount from "../ItemCount/ItemCount";
 
 function ItemDetail({ product }) {
   return (
@@ -21,7 +22,10 @@ function ItemDetail({ product }) {
         </ul>
         <h4 className="priceTag">$ {product.price}</h4>
       </div>
-      {/* <ItemCount stock={product.stock}/> */}
+      
+      <div> 
+        <ItemCount/>
+      </div>
     </div>
   );
 }
