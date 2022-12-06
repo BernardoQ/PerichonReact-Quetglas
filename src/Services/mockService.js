@@ -13,7 +13,7 @@ function getItems(idCategory) {
           (item) => item.category === idCategory
         );
         resolve(itemsRequested);
-      }, 1000);
+      }, 2000);
     }
   });
 }
@@ -31,3 +31,4 @@ export function getSingleItem(idParam) {
 }
 
 export default getItems;
+

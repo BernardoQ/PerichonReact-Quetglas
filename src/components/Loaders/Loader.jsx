@@ -1,9 +1,9 @@
-/*import React from "react";
+import React from "react";
 
-import { Ping } from "@uiball/loaders";
+import { Orbit } from "@uiball/loaders";
 
 function Loader() {
-  return <Ping size={128} speed={2} color="yellow" />;
+  return <Orbit size={128} speed={2} color="#E33532" />;
 }
 
-export default Loader;*/
+export default Loader;

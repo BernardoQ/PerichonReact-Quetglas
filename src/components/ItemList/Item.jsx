@@ -1,7 +1,6 @@
 import React from "react";
 import MyButton from "../MyButton/MyButton";
 import ToggleButton from "../ToggleButton/ToggleButton";
-
 import "./item.css";
 import { Link } from "react-router-dom";
 

@@ -15,11 +15,11 @@ function ItemCount({ stock, onAddToCart }) {
   return (
     <div className="itemcount_container">
       <div className="itemcount_control">
-        <MyButton onTouchButton={handleSubstract}>
+        <MyButton colorBtn="red" onTouchButton={handleSubstract}>
           -
         </MyButton>
         <span>{count}</span>
-        <MyButton onTouchButton={handleAdd}>
+        <MyButton colorBtn="green" onTouchButton={handleAdd}>
           +
         </MyButton>
       </div>

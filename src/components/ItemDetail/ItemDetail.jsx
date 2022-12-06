@@ -5,7 +5,6 @@ import { cartContext } from "../../context/cartContext";
 import MyButton from "../MyButton/MyButton";
 import { Link } from "react-router-dom";
 
-
 function ItemDetail({ product }) {
   const [isInCart, setIsInCart] = useState(false);
   const { addToCart } = useContext(cartContext);
@@ -13,7 +12,8 @@ function ItemDetail({ product }) {
   function onAddToCart(count) {
     setIsInCart(count);
     addToCart(product, count);
-  } 
+  }
+
  
   return (
     <div className="card-detail">
