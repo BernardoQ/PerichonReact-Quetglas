@@ -3,19 +3,29 @@ import { getSingleItem } from "../../Services/mockService";
 import ItemDetail from "./ItemDetail";
 
 import { useParams } from "react-router-dom";
+import Loader from "../Loaders/Loader";
 
 function ItemDetailContainer() {
   const [product, setProduct] = useState([]);
-  const { idItem } = useParams(); 
+  const [isLoading, setIsLoading] = useState(true);
+
+  const { idItem } = useParams();
 
   async function getItemsAsync() {
-    let respuesta = await getSingleItem(idItem);
-    setProduct(respuesta);
+    getSingleItem(idItem).then((respuesta) => {
+      setProduct(respuesta);
+      setIsLoading(false);
+    });
   }
+
+  // if
 
   useEffect(() => {
     getItemsAsync();
   }, []);
+
+  // 2. if -> retorno anticipado / early return
+  if (isLoading) return <Loader />;
 
   return <ItemDetail product={product} />;
 }

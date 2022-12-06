@@ -88,5 +88,3 @@ export function CartContextProvider({ children }) {
     </cartContext.Provider>
   );
 }
-
-
