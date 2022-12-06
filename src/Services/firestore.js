@@ -13,14 +13,15 @@ import {
 } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCEgrDKdj-UOB-z_FBlg9OxvbiIYD-qjiI",
-  authDomain: "react34815.firebaseapp.com",
-  projectId: "react34815",
-  storageBucket: "react34815.appspot.com",
-  messagingSenderId: "177963625631",
-  appId: "1:177963625631:web:85c70921db338bac0586aa",
+  apiKey: "AIzaSyAM2vs16jtBU-9q6NyJ49kuVYZvFvEZGYM",
+  authDomain: "perichonreact.firebaseapp.com",
+  projectId: "perichonreact",
+  storageBucket: "perichonreact.appspot.com",
+  messagingSenderId: "145859336469",
+  appId: "1:145859336469:web:7b202fe768d7cc366ef11c"
 };
 
+// Initialize Firebase
 const app = initializeApp(firebaseConfig);
 
 // 0. Inicializamos Firestore
