@@ -11,7 +11,7 @@ function CartWidget() {
       <Link to="/cart">
         <IconSVG />
       </Link>
-      <span style={{ color: "red" }}>{miContext.itemsInCart()}</span>
+      <span>{miContext.itemsInCart()}</span>
     </div>
   );
 }

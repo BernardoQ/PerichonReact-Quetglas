@@ -5,7 +5,6 @@ export const cartContext = createContext();
 
 // 2. Creamos nuestro Context Provider
 export function CartContextProvider({ children }) {
-  const saludoContext = "Hola Context!";
 
   const [cart, setCart] = useState([]);
 
@@ -78,7 +77,6 @@ export function CartContextProvider({ children }) {
       value={{
         cart,
         addToCart,
-        saludoContext,
         itemsInCart,
         removeItem,
         priceInCart,
