@@ -2,7 +2,6 @@ import React from "react";
 import CartWidget from "./CartWidget";
 import "./navbar.css";
 import { Link } from "react-router-dom";
-import { exportArrayToFirestore } from "../../Services/firestore";
 
 function NavBar() {
 

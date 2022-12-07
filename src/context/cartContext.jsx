@@ -1,11 +1,8 @@
 import { createContext, useState } from "react";
 
-// 1. Importamos e inicializamos el contexto con createContext()
 export const cartContext = createContext();
 
-// 2. Creamos nuestro Context Provider
 export function CartContextProvider({ children }) {
-  const saludoContext = "Hola Context!";
 
   const [cart, setCart] = useState([]);
 
@@ -22,12 +19,8 @@ export function CartContextProvider({ children }) {
     } else {
       /* let newCart = cart.map( item => item); */
 
-      //1) agregando una propiedad
       product.count = count;
       newCart.push(product);
-
-      //2) usando spread
-      /* newCart.push( ...product,count) */
 
       setCart(newCart);
     }
@@ -40,45 +33,31 @@ export function CartContextProvider({ children }) {
   }
 
   function priceInCart() {
-    /* calcular el costo total de la compra */
-    let totalPrice = 0;
-    cart.forEach(
-      (producto) =>
-        (totalPrice = totalPrice + producto.price * producto.cantidad)
-    );
-    return totalPrice;
-  }
-
-  function clear() {
-    /* vaciar el estado */
+    /*falta calcular el costo total de la compra */
+    let totalCost = 0;
+    return totalCost;
   }
 
   function removeItem(idRemove) {
-    console.log("Eliminando el item:", idRemove);
     const newCart = [...cart];
     newCart.pop();
     setCart(newCart);
+
     /* cart.filter -> Filtrar todos los items con un ID diferente a "idRemove"   */
   }
 
-  function alreadyInCart(id) {
-    /* return true/false */
+  function clear() {
+     // toast.error("Carrito vaciado", { position: "bottom-left" });
+    
+    /* vaciar el estado */
   }
 
-  /*  const value = {
-    saludoContext,
-    itemsInCart,
-    cart,
-  }; */
-
-  //3. retornamos el Provider del context creado
-  //4. Pasamos en la prop "value" las variables que queramos hacer visibles
   return (
     <cartContext.Provider
       value={{
         cart,
+        clear,
         addToCart,
-        saludoContext,
         itemsInCart,
         removeItem,
         priceInCart,

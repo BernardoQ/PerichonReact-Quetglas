@@ -30,3 +30,8 @@
   object-fit: contain;
   max-width: 140px;
 }
+
+.cartTotal{
+  text-align: right;
+  padding-right: 20%;
+}

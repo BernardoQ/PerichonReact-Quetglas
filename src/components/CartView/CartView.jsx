@@ -38,21 +38,24 @@ function CartView() {
 
   return (
     <div className="cart-container">
+
       <div className="cart-itemsList">
         {cart.map((item) => (
           <div key={item.id} className="cart-item">
             <img src={item.imgurl} alt={item.title} />
-            <h2>{item.title}</h2>
+            <h3>{item.title}</h3>
             <h4>${item.price}</h4>
             <h4>unidades: {item.count}</h4>
+            <h4>${item.price * item.count}</h4>
             <MyButton onTouchButton={() => removeItem(item.id)} colorBtn="red">
               X
             </MyButton>
           </div>
         ))}
       </div>
-      <CartForm onSubmit={handleCheckout} />
-      <MyButton>Vaciar carrito</MyButton>
+      <div className="cartTotal">Total ${priceInCart()}</div>
+      {/*<CartForm onSubmit={handleCheckout} />*/}
+      <MyButton onClick={() => clear()}>Vaciar carrito</MyButton>
     </div>
   );
 }
