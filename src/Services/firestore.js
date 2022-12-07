@@ -112,7 +112,9 @@ export async function createOrder(order) {
   return docOrder.id;
 }
 
-export async function exportArrayToFirestore() {
+
+//Funcion para subir datos a firebase
+/*export async function exportArrayToFirestore() {
   const products = [
     {
       id: 1,
@@ -285,13 +287,10 @@ export async function exportArrayToFirestore() {
   ];
 
   const collectionRef = collection(DB, "products");
-
-  // for... of
-  // products.map( (item) => {})
   for (let item of products) {
     item.index = item.id;
     delete item.id;
     let docOrder = await addDoc(collectionRef, item);
     console.log("Documento creado, id:", docOrder.id);
   }
-}
+}*/

@@ -6,7 +6,6 @@ import ItemListContainer from "./components/ItemList/ItemListContainer";
 import NavBar from "./components/NavBar/NavBar";
 import { CartContextProvider } from "./context/cartContext";
 import CartView from "./components/CartView/CartView";
-import ThankYou from "./components/CheckOut/CheckOut";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import CheckOut from "./components/CheckOut/CheckOut";
 
