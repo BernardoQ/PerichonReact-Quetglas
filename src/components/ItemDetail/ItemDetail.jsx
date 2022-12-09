@@ -37,7 +37,7 @@ function ItemDetail({ product }) {
       </div>
       {isInCart ? (
         <Link to="/cart">
-          <MyButton>Ir al Carrito</MyButton>
+          <MyButton >Ir al Carrito</MyButton>
         </Link>
       ) : (
         <ItemCount onAddToCart={onAddToCart} stock={product.stock} />

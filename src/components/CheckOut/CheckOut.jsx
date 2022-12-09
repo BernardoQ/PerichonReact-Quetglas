@@ -5,11 +5,11 @@ function CheckOut() {
   const idOrder = useParams().idOrder;
 
   return (
-    <div style={{ color: "white" }}>
+    <div style={{ color: "black" }}>
       <h1>Gracias por tu compra</h1>
       <h3>
-        El id de tu compra es: <strong>{idOrder}</strong>
-      </h3>
+        Tu Nº de compra es: <strong>{idOrder}</strong>
+      </h3>      
     </div>
   );
 }

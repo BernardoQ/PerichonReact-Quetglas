@@ -17,7 +17,6 @@ export function CartContextProvider({ children }) {
       newCart[itemAlreadyInCart].count += count;
       setCart(newCart);
     } else {
-      /* let newCart = cart.map( item => item); */
 
       product.count = count;
       newCart.push(product);
@@ -33,23 +32,22 @@ export function CartContextProvider({ children }) {
   }
 
   function priceInCart() {
-    /*falta calcular el costo total de la compra */
-    let totalCost = 0;
-    return totalCost;
+    let totalPrice = 0;
+    cart.forEach(
+      (product) =>(totalPrice = totalPrice + product.price * product.cantidad)
+    )
+    return totalPrice;
   }
 
   function removeItem(idRemove) {
     const newCart = [...cart];
     newCart.pop();
     setCart(newCart);
-
-    /* cart.filter -> Filtrar todos los items con un ID diferente a "idRemove"   */
   }
 
   function clear() {
-     // toast.error("Carrito vaciado", { position: "bottom-left" });
-    
-    /* vaciar el estado */
+    setCart([]);
+    // toast.error("Carrito vaciado", { position: "bottom-left" });
   }
 
   return (

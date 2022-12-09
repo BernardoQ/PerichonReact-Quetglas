@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { cartContext } from "../../context/cartContext";
 import { createOrder } from "../../Services/firestore";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 
 import MyButton from "../MyButton/MyButton";
 import "./cartview.css";
@@ -18,7 +18,7 @@ function CartView() {
       </div>
     );
 
-  async function handleCheckout(evt, data) {
+  async function handleCheckout(data) {
     // Crear nuestro objeto "orden de compra"
     const order = {
       buyer: data,
@@ -27,8 +27,9 @@ function CartView() {
       date: new Date(),
     };
 
-    const orderId = await createOrder(order);
-    navigate(`/thankyou/${orderId}`);
+    const orderId = await createOrder(data);
+    navigate(`/checkout/${orderId}`);
+    clear();
     /* ${orderId} */
     //1. Hacer un rendering condicional -> guardamos el id en un State
     //2. Sweet Alert/Notificación -> mostrando el id
@@ -53,9 +54,11 @@ function CartView() {
           </div>
         ))}
       </div>
-      <div className="cartTotal">Total ${priceInCart()}</div>
-      {/*<CartForm onSubmit={handleCheckout} />*/}
-      <MyButton onClick={() => clear()}>Vaciar carrito</MyButton>
+      <div className="cartTotal">Total ${priceInCart}</div>
+      <MyButton onTouchButton={clear} colorBtn="red">
+            Vaciar Carrito
+      </MyButton>
+      <CartForm onSubmit={handleCheckout} />
     </div>
   );
 }

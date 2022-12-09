@@ -22,12 +22,11 @@ export default function CartForm(props) {
     if (data.name.length === 0) return;
 
     evt.preventDefault();
-    props.onSubmit(evt, data);
+    props.onSubmit(data);
   }
 
   return (
     <form onSubmit={onSubmit}>
-      {/* Podriamos convertir los inputs en Componentes */}
       <div style={{ display: "flex", marginBottom: 8 }}>
         <label htmlFor="name" style={{ width: "100px", marginRight: 4 }}>
           Nombre
