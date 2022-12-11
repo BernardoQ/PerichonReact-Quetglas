@@ -11,8 +11,6 @@ export default function CartForm(props) {
   function onInputChange(evt) {
     let nameInput = evt.target.name;
     let value = evt.target.value;
-
-    // dynamic properties
     let newData = { ...data };
     newData[nameInput] = value;
     setData(newData);

@@ -19,7 +19,6 @@ function CartView() {
     );
 
   async function handleCheckout(data) {
-    // Crear nuestro objeto "orden de compra"
     const order = {
       buyer: data,
       items: cart,
@@ -30,11 +29,6 @@ function CartView() {
     const orderId = await createOrder(data);
     navigate(`/checkout/${orderId}`);
     clear();
-    /* ${orderId} */
-    //1. Hacer un rendering condicional -> guardamos el id en un State
-    //2. Sweet Alert/Notificación -> mostrando el id
-    //3. Redirigir al usuario a /thankyou
-    //3-b Redirigir al usuario a /thankyou/:orderid (persistencia)
   }
 
   return (
@@ -58,7 +52,7 @@ function CartView() {
       <MyButton onTouchButton={clear} colorBtn="red">
             Vaciar Carrito
       </MyButton>
-      <CartForm onSubmit={handleCheckout} />
+      <CartForm className="cartForm" onSubmit={handleCheckout} />
     </div>
   );
 }

@@ -21,33 +21,22 @@ const firebaseConfig = {
   appId: "1:145859336469:web:7b202fe768d7cc366ef11c"
 };
 
-// Initialize Firebase
 const app = initializeApp(firebaseConfig);
-
-// 0. Inicializamos Firestore
 const DB = getFirestore(app);
 
-//1. Traer todos los documentos
 export default async function getItems() {
-  //1.A Referenciamos nuestra colección
   const colectionProductsRef = collection(DB, "products");
-  //1.B Solicitamos todos los documentos de la colección
   const documentSnapshot = await getDocs(colectionProductsRef);
 
   const documentsData = documentSnapshot.docs.map((doc) => {
-    /* let docDataWithId = doc.data();
-    docDataWithId.id = doc.id; */
-    // spread operator
     return {
       ...doc.data(),
       id: doc.id,
     };
   });
-  // resolve
   return documentsData;
 }
 
-//1. Traer todos los documentos
 export async function getItemsOrdered() {
   const colectionProductsRef = collection(DB, "products");
   const q = query(colectionProductsRef, orderBy("index"), limit(10));
@@ -55,19 +44,14 @@ export async function getItemsOrdered() {
   const documentSnapshot = await getDocs(q);
 
   const documentsData = documentSnapshot.docs.map((doc) => {
-    /* let docDataWithId = doc.data();
-    docDataWithId.id = doc.id; */
-    // spread operator
     return {
       ...doc.data(),
       id: doc.id,
     };
   });
-  // resolve
   return documentsData;
 }
 
-//2. Traer un documento por ID
 export async function getSingleItem(idParams) {
   const docRef = doc(DB, "products", idParams);
 
@@ -79,7 +63,6 @@ export async function getSingleItem(idParams) {
   return itemData;
 }
 
-//3. Traer todos los  documentos según categoria
 export async function getItemsByCategory(categoryParams) {
   const collectionRef = collection(DB, "products");
 
@@ -91,19 +74,14 @@ export async function getItemsByCategory(categoryParams) {
   const documentSnapshot = await getDocs(queryCat);
 
   const documentsData = documentSnapshot.docs.map((doc) => {
-    /* let docDataWithId = doc.data();
-    docDataWithId.id = doc.id; */
-    // spread operator
     return {
       ...doc.data(),
       id: doc.id,
     };
   });
-  // resolve
   return documentsData;
 }
 
-//4. Enviar la orden a Firebase
 export async function createOrder(order) {
   const collectionRef = collection(DB, "orders");
 

@@ -18,13 +18,10 @@ function ItemDetailContainer() {
     });
   }
 
-  // if
-
   useEffect(() => {
     getItemsAsync();
   }, []);
 
-  // 2. if -> retorno anticipado / early return
   if (isLoading) return <Loader />;
 
   return <ItemDetail product={product} />;
