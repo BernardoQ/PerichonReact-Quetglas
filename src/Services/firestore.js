@@ -84,9 +84,8 @@ export async function getItemsByCategory(categoryParams) {
 
 export async function createOrder(order) {
   const collectionRef = collection(DB, "orders");
-
+  
   const docOrder = await addDoc(collectionRef, order);
-
   return docOrder.id;
 }
 

@@ -12,6 +12,7 @@ function ItemCountCart({ stock, onAddToCart }) {
     if (count > 1) setCount(count - 1);
   }
 
+
   return (
     <div className="itemcount_container">
       <div className="itemcount_control">
@@ -21,7 +22,7 @@ function ItemCountCart({ stock, onAddToCart }) {
         <span>{count}</span>
         <MyButton colorBtn="green" onTouchButton={handleAdd && onAddToCart(count)} >
           +
-        </MyButton>
+        </MyButton>     
       </div>
     </div>
   );
