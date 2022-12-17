@@ -1,8 +1,4 @@
-Perichon Ecommerce app es un proyecto para un emprendimiento local en Corrientes Capital-Argentina. Es una pyme que produce productos de limpieza. 
-
-Tome las bases visuales de una landing page antes creada en un curso anterior, colores, logos, etc de la marca.
-
-En la seccion footer, en los links a las redes sociales se puede conocer un poco mas acerca de la empresa.
+Perichon Ecommerce app es un proyecto para un emprendimiento local en Corrientes Capital-Argentina. Es una pyme que produce productos de limpieza. Tome las bases visuales de una landing page antes creada en un curso anterior. En la seccion footer, en los links a las redes sociales se puede ver un poco mas de este emprendimiento.
 
 La app fue realizada durante el curso de React de Coderhouse, siguiendo las directivas, consejos y enseñanzas del profesor Santiago Salkin.
 
@@ -32,8 +28,7 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
 
 Builds the app for production to the `build` folder.\
 It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
+git merge --abortld is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
