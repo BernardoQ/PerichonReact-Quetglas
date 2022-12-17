@@ -47,7 +47,6 @@ function ItemDetail({ product }) {
         </Link>
       ) : (
         <ItemCount onAddToCart={onAddToCart} stock={product.stock} />
-        <ToastContainer />
       )}
       
     </div>
