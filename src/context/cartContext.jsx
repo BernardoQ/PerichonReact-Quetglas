@@ -33,8 +33,8 @@ export function CartContextProvider({ children }) {
 
   function priceInCart() {
     let totalPrice = 0;
-    cart.forEach(
-      (product) =>(totalPrice = totalPrice + product.price * product.cantidad)
+    cart.map((item)=>
+      (item.price * item.cantidad).reduce((prev, curr) => prev + curr, 0)
     )
     return totalPrice;
   }

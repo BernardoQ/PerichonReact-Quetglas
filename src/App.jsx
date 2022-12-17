@@ -9,6 +9,7 @@ import CartView from "./components/CartView/CartView";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import CheckOut from "./components/CheckOut/CheckOut";
 
+
 function App() {
   return (
     <div className="App">
