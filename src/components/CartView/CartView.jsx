@@ -25,6 +25,7 @@ function CartView() {
       total: 0,
       date: new Date(),     
     };
+    
 
     swal("Gracias por tu compra");
 
