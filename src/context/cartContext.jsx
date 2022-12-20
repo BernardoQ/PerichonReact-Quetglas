@@ -5,6 +5,7 @@ export const cartContext = createContext();
 export function CartContextProvider({ children }) {
 
   const [cart, setCart] = useState([]);
+  
 
   function addToCart(product, count) {
     let itemAlreadyInCart = cart.findIndex(
@@ -32,12 +33,11 @@ export function CartContextProvider({ children }) {
   }
 
   function priceInCart() {
-    let totalPrice = 0;
-    cart.map((item)=>
-      (item.price * item.cantidad).reduce((prev, curr) => prev + curr, 0)
-    )
-    return totalPrice;
+    return (
+      cart.map(itemInCart => (itemInCart.price * itemInCart.count)).reduce((acc, value) => (acc + value),0) 
+      )
   }
+  console.log(cart)
 
   function removeItem(idRemove) {
     const newCart = [...cart];

@@ -24,13 +24,9 @@ function CartView() {
       items: cart,
       total: 0,
       date: new Date(),     
-    };
-    
+    };    
 
-    swal("Gracias por tu compra");
-
-    
-
+    swal("Gracias por tu compra");    
 
     const orderId = await createOrder(data);
     navigate(`/checkout/${orderId}`);
@@ -56,7 +52,7 @@ function CartView() {
       </div>
 
       <div className="cartTotal">
-        Total ${priceInCart}
+        Total ${priceInCart()}
       </div>
       <MyButton onTouchButton={clear} colorBtn="red">
             Vaciar Carrito
