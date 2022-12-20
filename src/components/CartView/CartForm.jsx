@@ -1,5 +1,4 @@
 import { useState } from "react";
-import MyButton from "../MyButton/MyButton";
 
 export default function CartForm(props) {
   const [data, setData] = useState({

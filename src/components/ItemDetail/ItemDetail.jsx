@@ -4,8 +4,7 @@ import { useContext, useState } from "react";
 import { cartContext } from "../../context/cartContext";
 import MyButton from "../MyButton/MyButton";
 import { Link } from "react-router-dom";
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+
 
 function ItemDetail({ product }) {
   const [isInCart, setIsInCart] = useState(false);
@@ -16,11 +15,6 @@ function ItemDetail({ product }) {
     addToCart(product, count);
   }
 
-  function productoAgregado(){
-    const notify = () => toast("Producto añadido al carrito");
-  } 
-
- 
   return (
     <div className="card-detail">
       <div className="card-detail_img">

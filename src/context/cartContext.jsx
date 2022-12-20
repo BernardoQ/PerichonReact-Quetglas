@@ -37,7 +37,6 @@ export function CartContextProvider({ children }) {
       cart.map(itemInCart => (itemInCart.price * itemInCart.count)).reduce((acc, value) => (acc + value),0) 
       )
   }
-  console.log(cart)
 
   function removeItem(idRemove) {
     const newCart = [...cart];
