@@ -6,14 +6,14 @@ function getItems(idCategory) {
     if (idCategory === undefined) {
       setTimeout(() => {
         resolve(products);
-      }, 2000);
+      }, 3000);
     } else {
       setTimeout(() => {
         let itemsRequested = products.filter(
           (item) => item.category === idCategory
         );
         resolve(itemsRequested);
-      }, 2000);
+      }, 3000);
     }
   });
 }
@@ -26,7 +26,7 @@ export function getSingleItem(idParam) {
 
     setTimeout(() => {
       resolve(itemRequested);
-    }, 2000);
+    }, 3000);
   });
 }
 

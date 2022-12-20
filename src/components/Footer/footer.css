@@ -22,19 +22,18 @@
         text-align: center;
         /*padding-right: 2rem;*/ }
         .footer .footer__content .quickMenu__content .quickMenu__title h4 {
-          font-size: 2rem;
-          font-weight: bolder;
-          color: black; }
+          font-weight:bolder;
+          font-size: 1.75rem;
+          color:rgb(18, 17, 16) }
         .footer .footer__content .quickMenu__content .quickMenu__item {
           transition: transform 0.3s; }
           .footer .footer__content .quickMenu__content .quickMenu__item:hover {
             transform: scale(1.2);
             transition: ease-out 0.3s; }
           .footer .footer__content .quickMenu__content .quickMenu__item a {
-            color: black;
-            font-size: 1.5rem;
-            font-weight: 400;
-            color: black; }
+            font-weight:bolder;
+            font-size: 1.15em;
+            color:rgb(18, 17, 16) }
             .footer .footer__content .quickMenu__content .quickMenu__item a:hover {
               transform: scale(5.2);
               transition: ease-out 0.2s;
