@@ -18,7 +18,7 @@ function CartView() {
       </div>
     );
 
-  async function handleCheckout(data) {
+  async function handleCheckout(evt) {
     const order = {
       buyer: data,
       items: cart,
@@ -28,7 +28,7 @@ function CartView() {
 
    // swal("Gracias por tu compra");    
 
-    const orderId = await createOrder(data);
+    const orderId = await createOrder(evt);
     navigate(`/checkout/${orderId}`);
     clear();
   }
