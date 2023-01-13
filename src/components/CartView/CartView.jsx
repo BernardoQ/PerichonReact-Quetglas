@@ -2,7 +2,6 @@ import React, { useContext } from "react";
 import { cartContext } from "../../context/cartContext";
 import { createOrder } from "../../Services/firestore";
 import { useNavigate } from "react-router-dom";
-import swal from "sweetalert";
 import MyButton from "../MyButton/MyButton";
 import "./cartview.css";
 import CartForm from "./CartForm";
@@ -18,17 +17,16 @@ function CartView() {
       </div>
     );
 
-  async function handleCheckout(evt) {
+  async function handleCheckout(data) {
     const order = {
       buyer: data,
       items: cart,
-      total: 0,
+      total: priceInCart(),
       date: new Date(),     
     };    
 
-   // swal("Gracias por tu compra");    
-
-    const orderId = await createOrder(evt);
+    createOrder(order)
+    const orderId = await createOrder(data);
     navigate(`/checkout/${orderId}`);
     clear();
   }

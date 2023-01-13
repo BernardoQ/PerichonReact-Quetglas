@@ -9,7 +9,7 @@ function ItemCount({ stock, onAddToCart }) {
   }
 
   function handleSubstract() {
-    if (count > 1) setCount(count - 120);
+    if (count > 120) setCount(count - 120);
   }
 
   return (

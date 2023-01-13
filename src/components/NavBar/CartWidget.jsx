@@ -11,7 +11,7 @@ function CartWidget() {
       <Link to="/cart">
         <IconSVG />
       </Link>
-      <span>{miContext.itemsInCart()}</span>
+      <span>${miContext.priceInCart()}</span>
     </div>
   );
 }
